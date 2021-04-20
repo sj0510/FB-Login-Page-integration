@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     Toast.makeText(MainActivity.this,"Login Successful..",Toast.LENGTH_LONG).show();
-                    //String imageURL = "https://graph.facebook.com/"+loginResult.getAccessToken().getUserId()+"/picture?return_ssl_resoureces=1";
-                    //Picasso.get().load(imageURL).into(profilePic);
+                    Intent nextIntent = new Intent(MainActivity.this,AnotherActivity.class);
+                    startActivity(nextIntent);
                 }
 
                 @Override
